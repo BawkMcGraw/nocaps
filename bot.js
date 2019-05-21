@@ -1,6 +1,5 @@
 const https = require('https');
 console.log('loaded');
-console.log(botId);
 
 class Bot {
     static checkMessage(message) {
@@ -25,8 +24,7 @@ class Bot {
     };
 
     static sendMessage(mText) {
-        const botId = "";
-        console.log('groupid');
+        const botId = "1513f91a7df5bc32fe58717fd8";
 
         const options = {
             hostname: 'api.groupme.com',
