@@ -2,7 +2,14 @@ const https = require('https');
 console.log('loaded');
 
 class Functions {
-
+    function rng() {
+        var array = []
+        function RNG(max) {
+            return Math.floor(Math.random()*Math.floor(max));
+        }
+        var RNG = RNG(3);
+        array = ['SHUT THE FUCK UP, NO ALL CAPS', 'I\'M TRYING TO SLEEP AND YOU\'RE SHOUTING', 'MY EARS A LITERALLY BLEEDING', 'OH I\'M SORRY, IS THIS A BWW ON GAME NIGHT?'];
+        return array[RNG];        
 }
 
 class Bot {
@@ -32,7 +39,7 @@ class Bot {
                     return null;
                 }
                 else {
-                    return "SHUT THE FUCK UP, NO ALL CAPS.";
+                    return rng();
                 }
             }
         }
