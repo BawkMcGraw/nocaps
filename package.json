@@ -1,11 +1,11 @@
 {
   "name": "groupme-nocaps-bot",
-  "version": "0.1",
+  "version": "0.0.1",
   "description": "shut the fuck up",
-  "author": "Noah Bass <noah@noahbass.com>",
+  "author": "Justin McKee <justin.d.mckee96@gmail.com>",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node app.js"
   },
   "engines": {
     "node": ">=4.0.0"
