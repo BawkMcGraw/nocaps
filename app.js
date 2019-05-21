@@ -4,8 +4,8 @@ const Bot = require('./bot');
 
 const router = new director.http.Router({
     '/': {
-        post: postResponse(),
-        get: getResponse()
+        post: Server.postResponse(),
+        get: Server.getResponse()
     }
 });
 
