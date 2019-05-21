@@ -1,6 +1,10 @@
 const https = require('https');
 console.log('loaded');
 
+class Functions {
+
+}
+
 class Bot {
     static checkMessage(message) {
         const mText = message.text;
@@ -8,18 +12,29 @@ class Bot {
         const groupid = message.group_id;
 
         // TEST EXPRESSION
-        const testex = /\/test/i;
+        const testex=/\/test/i;
+        const lowercase=/[a-z]/;
+        const botname=/nocaps/i;
+        const number=/[1-9]/;
 
         if (mText) {
-            if (testex.test(mText)) {
-                return "test";
-            }
-            else {
+            if (botname.test(mName)) {
+                console.log('bot triggered bot');
                 return null;
             }
-        }
-        else {
-            return null;
+            else {
+                if (lowercase.test(mText)) {
+                    console.log('lowercase detected');
+                    return null;
+                }
+                if (number.test(mText)) {
+                    console.log('number detected');
+                    return null;
+                }
+                else {
+                    return "SHUT THE FUCK UP, NO ALL CAPS.";
+                }
+            }
         }
     };
 
