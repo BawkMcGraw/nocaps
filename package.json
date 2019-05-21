@@ -1,0 +1,29 @@
+{
+  "name": "groupme-nocaps-bot",
+  "version": "0.1",
+  "description": "shut the fuck up",
+  "author": "Noah Bass <noah@noahbass.com>",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "director": "1.2.8",
+    "dotenv": "2.0.0",
+    "winston": "2.2.0"
+  },
+  "devDependencies": {
+    "localtunnel": "^1.9.0",
+    "promptly": "2.1.0"
+  },
+  "homepage": "https://github.com/bawkmcgraw/nocaps",
+  "bugs": "https://github.com/bawkmcgraw/nocaps/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bawkmcgraw/nocaps.git"
+  },
+  "license": "MIT"
+}
