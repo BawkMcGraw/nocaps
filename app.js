@@ -2,6 +2,16 @@ const http = require('http');
 const director = require('director');
 const Bot = require('./bot');
 
+const router = new director.http.Router({
+    '/': {
+        post: postResponse(),
+        get: getResponse()
+    }
+});
+
+const server = new Server(router);
+server.serve();
+
 class Server {
     constructor(router, port) {
         this.server = http.createServer(function(req, res) {
@@ -36,13 +46,3 @@ class Server {
         }
     };
 };
-
-const router = new director.http.Router({
-    '/': {
-        post: Server().postResponse,
-        get: Server().getResponse
-    }
-});
-
-const server = new Server(router);
-server.serve();
