@@ -1,7 +1,7 @@
 const https = require('https');
 console.log('loaded');
 
-class Functions {
+class Function {
     static rng() {
         var array = []
         function RNG(max) {
@@ -40,7 +40,7 @@ class Bot {
                     return null;
                 }
                 else {
-                    return rng();
+                    return Function.rng();
                 }
             }
         }
