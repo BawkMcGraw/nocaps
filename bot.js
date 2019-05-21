@@ -47,7 +47,7 @@ class Bot {
     };
 
     static sendMessage(mText) {
-        const botId = "1513f91a7df5bc32fe58717fd8";
+        const botId = "0263e95543e9cbb8beda5a4f72";
 
         const options = {
             hostname: 'api.groupme.com',
