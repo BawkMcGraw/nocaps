@@ -2,13 +2,6 @@ const http = require('http');
 const director = require('director');
 const Bot = require('./bot');
 
-const router = new director.http.Router({
-    '/': {
-        post: Server.postResponse,
-        get: Server.getResponse
-    }
-});
-
 const server = new Server(router);
 server.serve();
 
@@ -18,6 +11,11 @@ class Server {
             req.chunks = [];
             req.on('data', function(chunk) {
                 req.chunks.push(chunk.toString());
+            });
+
+            router.dispatch(req, res, function(err) {
+                res.writeHead(err.status, { "Content-Type": 'text/plain' });
+                res.end(err.message);
             });
         });
 
@@ -46,3 +44,10 @@ class Server {
         }
     };
 };
+
+const router = new director.http.Router({
+    '/': {
+        post: Server.postResponse,
+        get: Server.getResponse
+    }
+});
