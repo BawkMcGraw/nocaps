@@ -7,8 +7,8 @@ class Function {
         function RNG(max) {
             return Math.floor(Math.random()*Math.floor(max));
         }
-        var RNG = RNG(3);
-        array = ['SHUT THE FUCK UP, NO ALL CAPS', 'I\'M TRYING TO SLEEP AND YOU\'RE SHOUTING', 'MY EARS A LITERALLY BLEEDING', 'OH I\'M SORRY, IS THIS A BWW ON GAME NIGHT?'];
+        var RNG = RNG(4);
+        array = ['SHUT THE FUCK UP, NO ALL CAPS', 'I\'M TRYING TO SLEEP AND YOU\'RE SHOUTING', 'MY EARS ARE LITERALLY BLEEDING', 'OH I\'M SORRY, IS THIS A BWW ON GAME NIGHT?'];
         return array[RNG];        
     }
 }
