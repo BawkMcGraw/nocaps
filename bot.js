@@ -48,7 +48,7 @@ class Bot {
 
     static sendMessage(mText) {
 
-        const botId = "0263e95543e9cbb8beda5a4f72";
+        var botId = "0263e95543e9cbb8beda5a4f72";
 
         if (/41279538/.test(groupid)) {
             botId = '64ad92e919d1eee75af038dac6';
