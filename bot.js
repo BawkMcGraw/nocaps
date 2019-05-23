@@ -48,10 +48,10 @@ class Bot {
 
     static sendMessage(mText) {
 
-        var botId = "0263e95543e9cbb8beda5a4f72";
+        var botId = "";
 
-        if (/41279538/.test(groupid)) {
-            botId = '64ad92e919d1eee75af038dac6';
+        if (/[groupid]/.test(groupid)) {
+            botId = '';
         }
 
         const options = {
