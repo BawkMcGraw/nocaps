@@ -1,5 +1,6 @@
 const https = require('https');
 console.log('loaded');
+var groupid;
 
 class Function {
     static rng() {
@@ -17,10 +18,9 @@ class Bot {
     static checkMessage(message) {
         const mText = message.text;
         const mName = message.name;
-        const groupid = message.group_id;
+        groupid = message.group_id;
 
         // TEST EXPRESSION
-        const testex=/\/test/i;
         const lowercase=/[a-z]/;
         const botname=/nocaps/i;
         const number=/[1-9]/;
@@ -47,7 +47,12 @@ class Bot {
     };
 
     static sendMessage(mText) {
+
         const botId = "0263e95543e9cbb8beda5a4f72";
+
+        if (/41279538/.test(groupid)) {
+            botId = '64ad92e919d1eee75af038dac6';
+        }
 
         const options = {
             hostname: 'api.groupme.com',
